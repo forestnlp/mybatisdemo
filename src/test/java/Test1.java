@@ -35,6 +35,13 @@ public class Test1 {
             System.out.println(img);
         }
     }
+
+    @Test
+    public void testFindOne(){
+        // 调用SQL语句
+        Img img = sqlSession.selectOne("findOne");
+        System.out.println(img);
+    }
     @After
     public void release(){
         // 关闭SQLSession
