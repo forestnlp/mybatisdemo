@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.TopicMapper">
+    <select id="findAll" resultType="com.demo.entity.Topic">
+        select *
+        from topic
+    </select>
+    <select id="findById" resultType="com.demo.entity.Topic">
+        select *
+        from topic where id= #{id}
+    </select>
+    <select id="findByIdMap" resultType="map">
+        select *
+        from topic where id= #{id}
+    </select>
+    <select id="findByname"  resultType="com.demo.entity.Topic" >
+    select * from Topic where title like concat('%',#{name},'%')
+    </select>
+
+    <select id="findByTopicName"  resultType="com.demo.entity.Topic" >
+    select * from Topic where title like concat('%',#{topicname},'%')
+    </select>
+</mapper>

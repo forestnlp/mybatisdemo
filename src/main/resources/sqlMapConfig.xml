@@ -22,6 +22,7 @@
     <mappers>
         <mapper resource="mapper/ImgMapper.xml"></mapper>
         <mapper resource="mapper/AccountMapper.xml"></mapper>
+        <mapper class="com.demo.mapper.TopicMapper"></mapper>
     </mappers>
 
 </configuration>

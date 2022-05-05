@@ -30,7 +30,7 @@ public class Test1 {
     @Test
     public void testFindAll(){
         // 调用SQL语句
-        List<Img> list = sqlSession.selectList("findAll");
+        List<Img> list = sqlSession.selectList("Img.findAll");
         for (Img img : list) {
             System.out.println(img);
         }
@@ -39,7 +39,7 @@ public class Test1 {
     @Test
     public void testFindOne(){
         // 调用SQL语句
-        Img img = sqlSession.selectOne("findOne");
+        Img img = sqlSession.selectOne("Img.findOne");
         System.out.println(img);
     }
     @After

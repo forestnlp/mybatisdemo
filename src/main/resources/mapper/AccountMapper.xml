@@ -16,6 +16,10 @@
         insert into account(id,name,money) values (#{id},#{name},#{money})
     </insert>
 
+    <insert id="insertAccountWithoutKey" parameterType="com.demo.entity.Account" useGeneratedKeys="true" keyProperty="id">
+        insert into account(id,name,money) values (null,#{name},#{money})
+    </insert>
+
      <update id="updateAccount" parameterType="com.demo.entity.Account">
         update account set name = #{name} ,money = #{money} where id=#{id}
     </update>
