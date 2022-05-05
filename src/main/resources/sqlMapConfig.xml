@@ -21,6 +21,7 @@
     <!--加载mapper映射文件-->
     <mappers>
         <mapper resource="mapper/ImgMapper.xml"></mapper>
+        <mapper resource="mapper/AccountMapper.xml"></mapper>
     </mappers>
 
 </configuration>
